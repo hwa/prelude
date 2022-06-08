@@ -9,3 +9,5 @@
 
 (add-to-list 'default-frame-alist
              '(vertical-scroll-bars . nil))
+
+(setq projectile-project-search-path '("~/Documents/projects/"))
