@@ -13,3 +13,12 @@
 (setq projectile-project-search-path '("~/Documents/projects/"))
 
 (define-key dired-mode-map [mouse-2] 'dired-find-file)
+
+(unless (package-installed-p 'zoom-window)
+  (package-install 'zoom-window))
+(require 'zoom-window)
+(global-unset-key (kbd "C-x z"))
+(global-set-key (kbd "C-x z") 'zoom-window-zoom)
+(global-set-key (kbd "C-x C-z") 'repeat)
+(custom-set-variables
+ '(zoom-window-mode-line-color "DarkGreen"))
